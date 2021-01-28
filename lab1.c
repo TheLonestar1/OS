@@ -14,7 +14,7 @@ while [ -n "$1" ]
 do
 case "$1" in
 -h)
-    echo "Copyright reserved by : Nizamova Veronika"
+    echo "Author: Yuriev Yuriy,Ilya Karchev,Ilya Pahomov"
     echo "Availible arguments are:"
     echo " -h to read help; (example ./lab1 -h)"
     echo " -l to list all network connections; (example ./lab1 -l)"
