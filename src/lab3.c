@@ -42,7 +42,6 @@ int main(){
             argv[i] = options[i];
         }
         int n = WtN(argv);
-	printf("%d",n);
 		switch(n){
 			case 0: printf("Wrong argumet");
 				break;
