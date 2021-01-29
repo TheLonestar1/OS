@@ -15,7 +15,6 @@
 #include <signal.h>
 #include <ftw.h>
 static unsigned int total = 0;
-//char *ch();
 char* pchilde (char *argv[]);
 
 int WtN(char * argv[]) {
@@ -57,16 +56,6 @@ int size(int argc, char **argv) {
     printf("%s: %u\n", argv[2], total);
     return total;
 }
-
-//char *sizehelp()
-//{
-////    char *buffer;
-//    //char sizeOutput[50];
-//    char *sizeOutput = malloc(50 * sizeof(char));
-//    sprintf(sizeOutput, "%u", total);
-//    return sizeOutput;
-//}
-
 char *ls(int argn, char * argv[])
 {
     DIR *d;
@@ -301,4 +290,4 @@ char *lspr(char * argv[])
 
 
 
-#endif /* lab3_h */
+#endif 
