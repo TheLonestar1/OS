@@ -15,15 +15,6 @@
 #include <signal.h>
 #include "lab3.h"
 
-//void removeEndLine(char* client_message)
-//{
-//    int i=0;
-//    while((client_message[i])!='\n')
-//    {
-//        i++;
-//    }
-//    client_message[i] = '\0';
-//}
 
 char *choise(char* client_message){
     
@@ -59,18 +50,18 @@ char *choise(char* client_message){
         
          if(strncmp(argv[1],"-h",2)==0)
         {
-            printf("Copyright reserved by Nizamova Veronika\n");
-            printf("Avalible arguments are: \n");
-            printf("-t to transfer file to another directory example:\n  -t /Users/wazovski/Desktop/distant/oss/test.txt /Users/wazovski/Desktop/distant/tes/test.txt \n");
-            printf("-r to delete file example:\n -r /Users/wazovski/Desktop/distant/oss/test2.txt \n");
-            printf("-c to copy file in present directory example:\n -c /Users/wazovski/Desktop/distant/oss/test1.txt /Users/wazovski/Desktop/distant/oss/test2.txt \n");
-            printf("-s to see size of directory or file  example:\n -s /Users/wazovski/Desktop/distant/oss/test1.txt \n");
-            printf("-ls to see all files in directory  example:\n -ls /Users/wazovski/Desktop/distant/oss \n");
-            printf("-pr to see all processes in /proc directory  example:\n -pr \n");
+			    printf("Authors: Yuriev Yuriy,Ilya Pahomov,Ilya Karchev \n");
+			    printf("Avalible arguments are: \n");
+			    printf("-t to transfer file to another directory example:\n  -t ~/home/text.txt ~/home/documents \n");
+			    printf("-r to mover file example:\n -r ~/home/text.txt \n");
+			    printf("-c to copy file in present directory example:\n -c ~/home/text.txt ~/home/text1.txt \n");
+			    printf("-s to watch size of directory or file  example:\n -s ~/home/text.txt \n");
+			    printf("-ls to watch all files in directory  example:\n -ls ~/home/documents \n");
+			    printf("-pr to watch all processes in /proc directory  example:\n -pr \n");
         }
         else if(strncmp(argv[1],"-t",2)==0)
         {
-            message=trans(argn, argv);
+            message=mover(argn, argv);
         }
         else if(strncmp(argv[1],"-r",2)==0)
         {
@@ -79,7 +70,7 @@ char *choise(char* client_message){
         }
         else if(strncmp(argv[1],"-c",3)==0)
         {
-            message=cpy(argn,argv);
+            message=copy(argn,argv);
         }
         else if(strncmp(argv[1],"-s",2)==0)
         {
@@ -97,11 +88,11 @@ char *choise(char* client_message){
         }
         else if (strncmp(argv[1],"-ch",2)==0)
         {
-            message=ch();
+            message=pchild();
         }
         else if (strncmp(argv[1],"-chbg",4)==0)
         {
-            message=chbg();
+            message=pchildbg();
         }
     return message;
 }
