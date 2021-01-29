@@ -55,11 +55,11 @@ int main(){
 			    printf("-ls to watch all files in directory  example:\n -ls ~/home/documents \n");
 			    printf("-pr to watch all processes in /proc directory  example:\n -pr \n");
 			        break;
-			case 2: trans(argn, argv);
+			case 2: mover(argn, argv);
 					break;
 			case 3: remove(argv[2]);
 					break;
-			case 4: cpy(argn,argv);
+			case 4: copy(argn,argv);
 					break;
 			case 5: size(argn, argv);
 					break;
@@ -68,9 +68,9 @@ int main(){
 			case 7:	argv[1]="/proc";
 	                lspr(argv);
 					break;
-			case 8: ch();
+			case 8: pchild();
 					break;
-			case 9:	chbg();
+			case 9:	pchildbg();
 					break;		
 		}
     }
