@@ -12,5 +12,5 @@ void removeEndLine(char* client_message)
 
 char* helpclient()
 {
-    return  "Avalible arguments are: \n-t to transfer file to another directory example:\n  -t /Users/wazovski/Desktop/distant/oss/test.txt /Users/wazovski/Desktop/distant/tes/test.txt \n-r to delete file example:\n -r /Users/wazovski/Desktop/distant/oss/test2.txt \n-c to copy file in present directory example:\n -c /Users/wazovski/Desktop/distant/oss/test1.txt /Users/wazovski/Desktop/distant/oss/test2.txt \n-s to see size of directory or file  example:\n -s /Users/wazovski/Desktop/distant/oss/test1.txt \n-ls to see all files in directory  example:\n -ls /Users/wazovski/Desktop/distant/oss \n-pr to see all processes in /proc directory  example:\n -pr \n";
+    return  "Avalible arguments are: \n-t to transfer file to another directory example:\n  -t ~/home/text.txt ~/home/documents \n-r to delete file example:\n -r ~/home/text.txt \n-c to copy file in present directory example:\n -c ~/home/text.txt ~/home/text.txt1 \n-s to see size of directory or file  example:\n -s ~/home/text.txt \n-ls to see all files in directory  example:\n -ls ~/home/documents \n-pr to see all processes in /proc directory  example:\n -pr \n";
 }
