@@ -161,11 +161,11 @@ int main(int argn, char * argv[]) {
 			    printf("-ls to watch all files in directory  example:\n -ls ~/home/documents \n");
 			    printf("-pr to watch all processes in /proc directory  example:\n -pr \n");
 		        break;
-		case 2: trans(argn, argv);
+		case 2: mover(argn, argv);
 				break;
 		case 3: remove(argv[2]);
 				break;
-		case 4: cpy(argn,argv);
+		case 4: copy(argn,argv);
 				break;
 		case 5: size(argn, argv);
 				break;
