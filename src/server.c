@@ -22,7 +22,7 @@ int main(int argc , char *argv[])
     socket_desc = socket(AF_INET , SOCK_STREAM , 0);
     if (socket_desc == -1)
     {
-        printf("Не смог сделать розетку");
+        printf("Не смог сделать сокет");
     }
     
     //Prepare the sockaddr_in structure
@@ -61,9 +61,7 @@ int main(int argc , char *argv[])
             perror("Не создал поток");
             return 1;
         }
-        
-        //Now join the thread , so that we dont terminate before the thread
-        //pthread_join( sniffer_thread , NULL);
+    
         puts("управление передано");
     }
     
@@ -114,8 +112,7 @@ void *connection_handler(void *socket_desc)
         perror("Не получил");
     }
     }
-    //Free the socket pointer
-    //free(socket_desc);
+
     
     return 0;
 }
