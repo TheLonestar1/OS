@@ -16,7 +16,7 @@
 #include <ftw.h>
 static unsigned int total = 0;
 //char *ch();
-char* che (char *argv[]);
+char* pchilde (char *argv[]);
 
 int WtN(char * argv[]) {
     if(strncmp(argv[1],"-h",2)==0) return 1;
@@ -90,7 +90,7 @@ char *ls(int argn, char * argv[])
     return lsOutput;
 }
 
-char *trans(int argn, char * argv[])
+char *mover(int argn, char * argv[])
 {
     int src_fd, dst_fd, err;
     unsigned char buffer[4096];
@@ -125,7 +125,7 @@ char *trans(int argn, char * argv[])
     return transOutput;
 }
 
-char *cpy(int argn, char * argv[])
+char *copy(int argn, char * argv[])
 {
     int src_fd, dst_fd, err;
     unsigned char buffer[4096];
@@ -159,16 +159,33 @@ char *cpy(int argn, char * argv[])
     strcat(copyOutput, "copied");
     return copyOutput;
 }
-char *ch()
+			case 2: mover(argn, argv);
+					break;
+			case 3: remove(argv[2]);
+					break;
+			case 4: copy(argn,argv);
+					break;
+			case 5: size(argn, argv);
+					break;
+			case 6: ls(argn,argv);
+					break;
+			case 7:	argv[1]="/proc";
+	                lspr(argv);
+					break;
+			case 8: pchild();
+					break;
+			case 9:	pchildbg();
+					break;	
+char *pchild()
 {
     //char output[300];
     char *chOutput = malloc(300 * sizeof(char));
     char *message;
-    message=che('-h');
+    message=pchilde('-h');
     strcat(chOutput, message);
     return chOutput;
 }
-char* che (char *argv[])
+char* pchilde (char *argv[])
 {
     pid_t pid;
     int rv=0,status;
@@ -202,7 +219,7 @@ char* che (char *argv[])
     }
     return cheOutput;
 }
-char* chbg()
+char* pchildbg()
 {
     char  *buffer;
     //char output[300];
