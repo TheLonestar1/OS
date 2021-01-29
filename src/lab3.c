@@ -24,7 +24,7 @@ int main(){
 
         int argn=1;
 
-        printf("%s\n", "insert your options. e.g.: [--ngf=20]");
+        printf("%s\n", "insert your options. e.g.: -h ok");
         printf("%s\n", "if finished press [ok]");
 
         scanf("%s",options[argn]);
@@ -49,11 +49,11 @@ int main(){
 			    printf("Authors: Yuriev Yuriy,Ilya Pahomov,Ilya Karchev \n");
 			    printf("Avalible arguments are: \n");
 			    printf("-t to transfer file to another directory example:\n  -t ~/home/text.txt ~/home/documents \n");
-			    printf("-r to delete file example:\n -r ~/home/text.txt \n");
+			    printf("-r to mover file example:\n -r ~/home/text.txt \n");
 			    printf("-c to copy file in present directory example:\n -c ~/home/text.txt ~/home/text1.txt \n");
-			    printf("-s to see size of directory or file  example:\n -s ~/home/text.txt \n");
-			    printf("-ls to see all files in directory  example:\n -ls ~/home/documents \n");
-			    printf("-pr to see all processes in /proc directory  example:\n -pr \n");
+			    printf("-s to watch size of directory or file  example:\n -s ~/home/text.txt \n");
+			    printf("-ls to watch all files in directory  example:\n -ls ~/home/documents \n");
+			    printf("-pr to watch all processes in /proc directory  example:\n -pr \n");
 			        break;
 			case 2: trans(argn, argv);
 					break;
