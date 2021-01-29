@@ -33,7 +33,7 @@ int main(int argc , char *argv[])
     //Bind
     if( bind(socket_desc,(struct sockaddr *)&server , sizeof(server)) < 0)
     {
-        puts("Не получилос");
+        puts("Не настроилось");
         return 1;
     }
     puts("Связь есть!");
@@ -49,7 +49,7 @@ int main(int argc , char *argv[])
         puts("Соединение принято");
         
         //Reply to the client
-        message = "Здравствуйте , я принял ваше соединение и сейчас назначу ассистента\n";
+        message = "Здравствуйте , я принял ваше соединение и сейчас передам управление\n";
         write(new_socket , message , strlen(message));
         
         pthread_t sniffer_thread;
@@ -64,12 +64,12 @@ int main(int argc , char *argv[])
         
         //Now join the thread , so that we dont terminate before the thread
         //pthread_join( sniffer_thread , NULL);
-        puts("Ассистент назначен");
+        puts("управление передано");
     }
     
     if (new_socket<0)
     {
-        perror("Соединение не удалос");
+        perror("Соединение не удалось");
         return 1;
     }
     
