@@ -56,7 +56,7 @@ int ls(int argn, char * argv[])
     return(0);
 }
 
-void trans(int argn, char * argv[])
+void mover(int argn, char * argv[])
 {
     int src_fd, dst_fd, err;
     unsigned char buffer[4096];
@@ -87,7 +87,7 @@ void trans(int argn, char * argv[])
     remove(src_path);
 }
 
-void cpy(int argn, char * argv[])
+void copy(int argn, char * argv[])
 {
     int src_fd, dst_fd, err;
     unsigned char buffer[4096];
@@ -154,12 +154,12 @@ int main(int argn, char * argv[]) {
 		case 1: 
 			    printf("Authors: Yuriev Yuriy,Ilya Pahomov,Ilya Karchev \n");
 			    printf("Avalible arguments are: \n");
-			    printf("-t to transfer file to another directory example:\n  -t ~/home/text.txt ~/home/documents \n");
+			    printf("-t to move file to another directory example:\n  -t ~/home/text.txt ~/home/documents \n");
 			    printf("-r to delete file example:\n -r ~/home/text.txt \n");
 			    printf("-c to copy file in present directory example:\n -c ~/home/text.txt ~/home/text1.txt \n");
-			    printf("-s to see size of directory or file  example:\n -s ~/home/text.txt \n");
-			    printf("-ls to see all files in directory  example:\n -ls ~/home/documents \n");
-			    printf("-pr to see all processes in /proc directory  example:\n -pr \n");
+			    printf("-s to watch size of directory or file  example:\n -s ~/home/text.txt \n");
+			    printf("-ls to watch all files in directory  example:\n -ls ~/home/documents \n");
+			    printf("-pr to watch all processes in /proc directory  example:\n -pr \n");
 		        break;
 		case 2: trans(argn, argv);
 				break;
