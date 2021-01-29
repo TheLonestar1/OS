@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/TheLonestar1/OS.svg?branch=main)](https://travis-ci.org/github/TheLonestar1/OS)
+[![Build Status](https://travis-ci.com/TheLonestar1/OS.svg?branch=main)](https://travis-ci.com/github/TheLonestar1/OS)
 
 # os
 ## Проект «LiteSH»
