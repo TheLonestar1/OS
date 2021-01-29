@@ -78,7 +78,6 @@ int main(int argc , char *argv[])
     
     int socket_desc;
     struct sockaddr_in server;
-//    char *message , server_reply[500],server_reply2[500];
     
     //Create socket
     socket_desc = socket(AF_INET , SOCK_STREAM , 0);
