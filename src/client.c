@@ -84,7 +84,7 @@ int main(int argc , char *argv[])
     socket_desc = socket(AF_INET , SOCK_STREAM , 0);
     if (socket_desc == -1)
     {
-        printf("Не могу создать розетку");
+        printf("Не могу создать сокет");
     }
     sockfd=socket_desc;
         
@@ -106,30 +106,6 @@ int main(int argc , char *argv[])
     pthread_create(&send_msg_thread, NULL, (void *) SendMsg, NULL);
 
     
-//        for(int i=0; i<2;i++)
-//        {
-//            if( recv(socket_desc, server_reply , 2000 , 0) < 0)
-//            {
-//                puts("Не принял");
-//            }
-//            puts("Пришел ответ\n");
-//            puts(server_reply);
-//        }
-//        char buff[200];
-//    ///    char *ukaz=NULL;
-//        scanf("%99[^\n]",buff);
-//        message=buff;
-//            if( send(socket_desc , message , strlen(message) , 0) < 0)
-//            {
-//                puts("Не отправил");
-//                return 1;
-//            }
-//            if( recv(socket_desc, server_reply2 , 2000 , 0) < 0)
-//            {
-//                puts("Не принял");
-//            }
-//            puts("Пришел ответ\n");
-//            puts(server_reply2);
     while (1)
         if(flag)
         {
@@ -138,6 +114,6 @@ int main(int argc , char *argv[])
         }
     
 
-    shutdown(socket_desc, SHUT_RD);//(socket_desc);
+    shutdown(socket_desc, SHUT_RD);
     return 0;
 }
