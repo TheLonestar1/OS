@@ -148,23 +148,6 @@ char *copy(int argn, char * argv[])
     strcat(copyOutput, "copied");
     return copyOutput;
 }
-			case 2: mover(argn, argv);
-					break;
-			case 3: remove(argv[2]);
-					break;
-			case 4: copy(argn,argv);
-					break;
-			case 5: size(argn, argv);
-					break;
-			case 6: ls(argn,argv);
-					break;
-			case 7:	argv[1]="/proc";
-	                lspr(argv);
-					break;
-			case 8: pchild();
-					break;
-			case 9:	pchildbg();
-					break;	
 char *pchild()
 {
     //char output[300];
