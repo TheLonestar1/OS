@@ -19,14 +19,14 @@ char* pchilde (char *argv[]);
 
 int WtN(char * argv[]) {
     if(strncmp(argv[1],"-h",2)==0) return 1;
-    else if(strncmp(argv[1],"-t",4)==0) return 2;
-    else if(strncmp(argv[1],"-r",4)==0)return 3;
-    else if(strncmp(argv[1],"-c",4)==0)return 4;
-    else if(strncmp(argv[1],"-s",4)==0)return 5;
-    else if(strncmp(argv[1],"-ls",4)==0)return 6;
-    else if(strncmp(argv[1],"-pr",4)==0)return 7;
-    else if(strncmp(argv[1],"-ch",4)==0)return 8;
-    else if(strncmp(argv[1],"-chbg",4)==0)return 9;	
+    else if(strncmp(argv[1],"-t",6)==0) return 2;
+    else if(strncmp(argv[1],"-r",6)==0)return 3;
+    else if(strncmp(argv[1],"-c",6)==0)return 4;
+    else if(strncmp(argv[1],"-s",6)==0)return 5;
+    else if(strncmp(argv[1],"-ls",6)==0)return 6;
+    else if(strncmp(argv[1],"-pr",6)==0)return 7;
+    else if(strncmp(argv[1],"-pchild",6)==0)return 8;
+    else if(strncmp(argv[1],"-pchildbg",6)==0)return 9;	
     return 0;
 }
 
