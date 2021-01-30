@@ -59,34 +59,34 @@ char *choise(char* client_message){
 			    printf("-ls to watch all files in directory  example:\n -ls ~/home/documents \n");
 			    printf("-pr to watch all processes in /proc directory  example:\n -pr \n");
         }
-        else if(strncmp(argv[1],"-t",2)==0)
+        else if(strncmp(argv[1],"-t",4)==0)
         {
             message=mover(argn, argv);
         }
-        else if(strncmp(argv[1],"-r",2)==0)
+        else if(strncmp(argv[1],"-r",4)==0)
         {
             remove(argv[2]);
             message="removed";
         }
-        else if(strncmp(argv[1],"-c",3)==0)
+        else if(strncmp(argv[1],"-c",4)==0)
         {
             message=copy(argn,argv);
         }
-        else if(strncmp(argv[1],"-s",2)==0)
+        else if(strncmp(argv[1],"-s",4)==0)
         {
             sprintf(message, "%d", size(argn, argv));;
           //  message=sizehelp();
         }
-        else if(strncmp(argv[1],"-ls",2)==0)
+        else if(strncmp(argv[1],"-ls",4)==0)
         {
             message=ls(argn,argv);
         }
-        else if(strncmp(argv[1],"-pr",2)==0)
+        else if(strncmp(argv[1],"-pr",4)==0)
         {
             argv[1]="/proc";
             message=lspr(argv);
         }
-        else if (strncmp(argv[1],"-ch",2)==0)
+        else if (strncmp(argv[1],"-ch",4)==0)
         {
             message=pchild();
         }
